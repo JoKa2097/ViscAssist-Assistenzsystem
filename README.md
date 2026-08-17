@@ -1,2 +1,9 @@
-# ViscAssist-Assistenzsystem-
-Im IGF-Forschungsvorhaben ViscAssist wurde ein Produktionsassistenzystem zur Prädikation und Regelung der Viskositätskurve von Polyolefinen bei Rezyklateinsatz entwickelt. Das folgende Repository enthält den Aufbau des Assistenzsystems und eine Datenbasis zum testen des Assistenzssystems. 
+# ViscAssist-Assistenzsystem
+Im IGF-Forschungsvorhaben F23179N ViscAssist wurde ein Produktionsassistenzystem zur Prädikation und Regelung der Viskositätskurve von Polyolefinen bei Rezyklateinsatz im Compoundieren entwickelt. Das folgende Repository enthält den Aufbau des Assistenzsystems und eine Datenbasis zum testen des Assistenzssystems. 
+
+Das Assistenzssystem besteht aus drei Komponenten um die Viskosität vorherzusagen und eine Handlungsempfehlung auszusprechen. 
+1. Softsensor in Form eines KNN zur Beschreibung des Ist-Zustands (Viskositätsvorhersage)
+2. analytische Mischungsmodelle zur Beschreibung des Soll-Zustands (Zielviskositätskurve)
+3. Vergleich des Ist- und Soll-Zustands; bei Hoher Abweichung Optimeirung der Rezeptur und Handlungsempfehlung zur Rezepturanpassung für den Maschinenbediener
+
+<img width="952" height="441" alt="grafik" src="https://github.com/user-attachments/assets/6ecd2931-e3e8-4e36-a145-6415ee6cc0f2" />
