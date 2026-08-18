@@ -10,3 +10,20 @@ Das Assistenzssystem besteht aus drei Komponenten um die Viskosität vorherzusag
 
 Es wurde eine Datenbank mit 4 Polypropylentypen, 1 Peroxidtyp und 3 PCR Polypropylentypen erarbeitet. Der komplette Datensatz kann auf Anfrage erhalten werden. 
 Dazu wurde ein Transfermodell für Polyethylen entwickelt. Das Transfermodell wurde mit 1 Polyethylen und 2 PCR Polyethylentypen entwickelt. 
+
+# Anleitung Nutzeroberfläche 
+<img width="603" height="378" alt="grafik" src="https://github.com/user-attachments/assets/d43b41fa-76c9-4c8a-8dc7-d529ce1d5285" />
+Hier ist die Polypropylen IKV-Datenbasis hinterlegt; hier kann auch eine eigene Datenbasis hinzugefügt werden
+<img width="597" height="679" alt="grafik" src="https://github.com/user-attachments/assets/106ceb6c-3747-4417-bbf5-e163b1ca8be1" />
+Die Soll-Rezeptur ist die angestrebte Rezeptur mit der normalerweise die Zielviskositäten erreicht werden. Die Summe der Mischungen muss immer 1 ergeben. Peroxid kann prozentual hinzugefügt werden. Aus der Soll-Rezeptur berechnet sich die Soll-Kurve mithilfe von analytischen Mischungsmodellen. 
+<img width="631" height="648" alt="grafik" src="https://github.com/user-attachments/assets/98f3ca02-2ff4-422c-aa7f-9522933536f6" />
+Die Aktuelle Rezeptur ist die Rezeptur die gerade im Extruder verarbeitet wird. Diese dient nur als Information um später Vorschläge als Rezepturanpassung geben zu können, ist aber keine Berechnungsgrundlage für die Modelle. 
+<img width="579" height="717" alt="grafik" src="https://github.com/user-attachments/assets/382d52c7-2507-4395-8858-122724a95fe9" />
+Hier werden die aktuellen Prozessdaten, die am Extruder abgelesen werden hinterlegt. Anhand der Prozessdaten wird mittels eines Softsensors (KNN) die Ist-Viskositätskurve berechnet. 
+<img width="579" height="229" alt="grafik" src="https://github.com/user-attachments/assets/f62f3b93-a3b2-4123-ae26-983b7fd0e120" />
+Es kann der Toleranzbereich in welchem die Kurven im Mittel voneinander Abweichen dürfen festgelegt werden. 
+<img width="1938" height="1579" alt="grafik" src="https://github.com/user-attachments/assets/9b03df4e-59cc-49b4-b1fa-1ca78715ce47" />
+Der Soll-ist-Vergleich aus den Berechneten Kurven wird grafisch dargestellt und dazu berechnet. 
+<img width="1083" height="1783" alt="grafik" src="https://github.com/user-attachments/assets/0aadaed7-bdfc-4f72-95dc-5827515b1a3c" />
+Anhand der Bewertung wird iterativ eine Optimale Rezepturempfehlung berechnet (Bei mehr Daten könnte der Vorgang auch mittels Partikelschwarm-Optimierung durchgeführt werden). Hierzu wird nur in den verwendeten Materialien optimiert. 
+
