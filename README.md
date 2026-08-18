@@ -100,7 +100,7 @@ ViscAssist/
     └── plotting.py
 
 
-```markdown
+
 ### `preprocess.py` – Aufbereitung der Prozessdaten
 
 Bereitet die in der Benutzeroberfläche eingegebenen Prozessdaten für den Softsensor auf.
