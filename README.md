@@ -74,7 +74,7 @@ Darauf aufbauend wird eine Rezepturempfehlung iterativ berechnet, mit welcher di
 
 ## Übersicht zur Installation des Systems/ Ordnerstruktur
 
-## Aufbau des Assistenzsystems
+### Aufbau des Assistenzsystems
 
 Die Anwendung ist in die Benutzeroberfläche (`app.py`) und die eigentliche Berechnungslogik im Verzeichnis `src/` aufgeteilt. Dadurch sind Darstellung, Modelle und Berechnungen voneinander getrennt.
 ```text 
@@ -97,62 +97,46 @@ ViscAssist/
     ├── comparison.py
     ├── control_logic.py
     └── plotting.py
-
+```
 
 
 ### "preprocess.py" – Aufbereitung der Prozessdaten
 
 Bereitet die in der Benutzeroberfläche eingegebenen Prozessdaten für den Softsensor auf.
-
 Für das IKV-Modell werden folgende sechs Prozessgrößen verwendet:
-
 - mittleres Drehmoment
 - mittlerer Druck
 - gemessene Temperatur
 - mittlere Drehzahl
 - Volumenstrom
 - Extrudertemperatur
-
 Die Prozessgrößen werden in die für das KNN erforderliche Reihenfolge gebracht und mit dem beim Training verwendeten Input-Scaler skaliert.
 
 ### "inference.py" – Softsensor
 
 Enthält das trainierte künstliche neuronale Netz zur Vorhersage der Ist-Viskositätskurve.
-
 Das KNN erhält die sechs aufbereiteten Prozessgrößen als Eingangsgrößen und gibt die Viskosität an sechs definierten Scherraten aus. Neben der Modellarchitektur enthält das Modul die Funktionen zum Laden des trainierten Modells und der zugehörigen Skalierer sowie zur Rücktransformation der vorhergesagten Viskositätswerte.
 
 ### "prediction.py" – Berechnung der Soll-Viskositätskurve
 
 Enthält die analytischen Mischungsmodelle zur Berechnung der Viskositätskurve aus einer vorgegebenen Rezeptur.
-
-Aus der Datenbasis werden zunächst die Viskositätskurven der einzelnen Polymerkomponenten bestimmt. Für Polymermischungen wird daraus eine Mischungsviskosität berechnet. Zusätzlich wird der Einfluss der Peroxidzugabe (CR5P) über materialabhängige Modellparameter berücksichtigt.
-
-Aus der in der Benutzeroberfläche angegebenen Soll-Rezeptur wird damit die Soll-Viskositätskurve bei den sechs Scherraten
-
-51, 102, 204, 408, 815 und 1630 s⁻¹
-
-berechnet.
+Aus der Datenbasis werden zunächst die Viskositätskurven der einzelnen Polymerkomponenten bestimmt. Für Polymermischungen wird daraus eine Mischungsviskosität berechnet. Zusätzlich wird der Einfluss der Peroxidzugabe (CR5P) über materialabhängige Modellparameter berücksichtigt. Aus der in der Benutzeroberfläche angegebenen Soll-Rezeptur wird damit die Soll-Viskositätskurve bei den sechs Scherraten 51, 102, 204, 408, 815 und 1630 s⁻¹ berechnet.
 
 ### "comparison.py" – Soll-Ist-Vergleich
 
 Vergleicht die durch den Softsensor vorhergesagte Ist-Viskositätskurve mit der aus der Soll-Rezeptur berechneten Soll-Viskositätskurve.
-
 Hierfür werden unter anderem die absoluten und relativen Abweichungen sowie die mittlere absolute relative Abweichung berechnet. Anhand des vom Anwender vorgegebenen Toleranzbereichs wird anschließend bewertet, ob sich die Ist-Kurve noch innerhalb des zulässigen Bereichs befindet.
 
 ### "control_logic.py" – Rezepturanpassung
 
 Verknüpft die einzelnen Modelle und enthält die Logik zur Ermittlung einer geeigneten Rezepturanpassung.
-
 Zunächst wird aus der Soll-Rezeptur die Zielviskositätskurve berechnet. Die aktuelle Ist-Viskositätskurve wird mithilfe des Softsensors aus den Prozessdaten vorhergesagt und anschließend mit der Soll-Kurve verglichen.
-
 Liegt die Abweichung außerhalb des vorgegebenen Toleranzbereichs, wird eine Rezepturanpassung gesucht. Die Suche erfolgt deterministisch und schrittweise von gröberen zu feineren Rezepturänderungen. Es werden ausschließlich Polymerkomponenten verändert, die auch in der Soll-Rezeptur enthalten sind. Materialien außerhalb dieses Rezepturraums bleiben unverändert.
-
 Für mögliche Rezepturen wird die zu erwartende Viskositätskurve berechnet und bewertet. Ziel ist eine möglichst geringe Abweichung von der Soll-Viskositätskurve bei gleichzeitig möglichst kleiner Änderung der aktuellen Rezeptur.
 
 ### "plotting.py" – Visualisierung
 
 Enthält die Funktionen zur grafischen Darstellung der berechneten Viskositätskurven.
-
 Die Soll- und Ist-Viskositätskurven werden über der Scherrate doppellogarithmisch dargestellt und können dadurch direkt miteinander verglichen werden.
 
 
