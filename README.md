@@ -25,7 +25,7 @@ Hier ist die Polypropylen-IKV-Datenbasis hinterlegt. Hier kann auch eine eigene 
 
 Die Soll-Rezeptur ist die angestrebte Rezeptur, mit der normalerweise die Zielviskositäten erreicht werden. Die Summe der Mischungsanteile muss immer 1 ergeben. Peroxid kann prozentual hinzugefügt werden. Aus der Soll-Rezeptur wird die Soll-Kurve mithilfe analytischer Mischungsmodelle berechnet.
 
-<img src="https://github.com/user-attachments/assets/dc129e8d-c902-47c4-9e5b-38cc3c1450c4" />
+<img src="https://github.com/user-attachments/assets/dc129e8d-c902-47c4-9e5b-38cc3c1450c4"
      alt="Aktuelle Rezeptur"
      width="300">
 
@@ -47,8 +47,11 @@ Hier kann der Toleranzbereich festgelegt werden, innerhalb dessen die Kurven im 
      alt="Soll-Ist-Vergleich"
      width="700">
 
-Der Soll-Ist-Vergleich der berechneten Kurven wird grafisch dargestellt und zusätzlich quantitativ ausgewertet.
+Der Soll-Ist-Vergleich der berechneten Kurven wird grafisch dargestellt und zusätzlich quantitativ ausgewertet. 
 
 <img src="https://github.com/user-attachments/assets/0aadaed7-bdfc-4f72-95dc-5827515b1a3c"
      alt="Rezepturanpassung"
      width="400">
+     
+Darauf aufbauend wird eine Rezepturempfehlung iterativ berechnet, mit welcher die Soll-Viskosität errreicht werden soll. Die Suche nach einer Optimalen Rezeptur erfolgt nur in den genutzten Rezepturen.  
+
