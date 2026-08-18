@@ -15,31 +15,31 @@ Dazu wurde ein Transfermodell für Polyethylen entwickelt. Das Transfermodell wu
 
 <img src="https://github.com/user-attachments/assets/d43b41fa-76c9-4c8a-8dc7-d529ce1d5285"
      alt="Datenbasis"
-     width="500">
+     width="300">
 
 Hier ist die Polypropylen-IKV-Datenbasis hinterlegt. Hier kann auch eine eigene Datenbasis hinzugefügt werden.
 
 <img src="https://github.com/user-attachments/assets/106ceb6c-3747-4417-bbf5-e163b1ca8be1"
      alt="Soll-Rezeptur"
-     width="500">
+     width="300">
 
 Die Soll-Rezeptur ist die angestrebte Rezeptur, mit der normalerweise die Zielviskositäten erreicht werden. Die Summe der Mischungsanteile muss immer 1 ergeben. Peroxid kann prozentual hinzugefügt werden. Aus der Soll-Rezeptur wird die Soll-Kurve mithilfe analytischer Mischungsmodelle berechnet.
 
 <img src="https://github.com/user-attachments/assets/98f3ca02-2ff4-422c-aa7f-9522933536f6"
      alt="Aktuelle Rezeptur"
-     width="500">
+     width="300">
 
 Die aktuelle Rezeptur ist die Rezeptur, die gerade im Extruder verarbeitet wird. Sie dient als Information, um später Vorschläge zur Rezepturanpassung geben zu können, ist jedoch keine Berechnungsgrundlage für die Modelle.
 
 <img src="https://github.com/user-attachments/assets/382d52c7-2507-4395-8858-122724a95fe9"
      alt="Prozessdaten"
-     width="500">
+     width="300">
 
 Hier werden die aktuellen Prozessdaten eingetragen, die am Extruder abgelesen werden. Anhand dieser Prozessdaten wird mittels eines Softsensors (KNN) die Ist-Viskositätskurve berechnet.
 
 <img src="https://github.com/user-attachments/assets/f62f3b93-a3b2-4123-ae26-983b7fd0e120"
      alt="Toleranzbereich"
-     width="500">
+     width="200">
 
 Hier kann der Toleranzbereich festgelegt werden, innerhalb dessen die Kurven im Mittel voneinander abweichen dürfen.
 
