@@ -15,7 +15,7 @@ Der komplette Datensatz kann auf Anfrage erhalten werden.
 
 ## Anleitung Nutzeroberfläche 
 
-###Modellwahl
+### Modellwahl
 
 <img src="https://github.com/user-attachments/assets/d43b41fa-76c9-4c8a-8dc7-d529ce1d5285"
      alt="Datenbasis"
@@ -23,7 +23,7 @@ Der komplette Datensatz kann auf Anfrage erhalten werden.
      
 Hier ist die Polypropylen-IKV-Datenbasis hinterlegt. Hier kann auch eine eigene Datenbasis hinzugefügt werden.
 
-###Soll-Rezeptur
+### Soll-Rezeptur
 
 <img src="https://github.com/user-attachments/assets/106ceb6c-3747-4417-bbf5-e163b1ca8be1"
      alt="Soll-Rezeptur"
@@ -31,7 +31,7 @@ Hier ist die Polypropylen-IKV-Datenbasis hinterlegt. Hier kann auch eine eigene 
      
 Die Soll-Rezeptur ist die angestrebte Rezeptur, mit der normalerweise die Zielviskositäten erreicht werden. Die Summe der Mischungsanteile muss immer 1 ergeben. Peroxid kann prozentual hinzugefügt werden. Aus der Soll-Rezeptur wird die Soll-Kurve mithilfe analytischer Mischungsmodelle berechnet.
 
-###Ist-Rezeptur
+### Ist-Rezeptur
 
 <img src="https://github.com/user-attachments/assets/dc129e8d-c902-47c4-9e5b-38cc3c1450c4"
      alt="Aktuelle Rezeptur"
@@ -39,7 +39,7 @@ Die Soll-Rezeptur ist die angestrebte Rezeptur, mit der normalerweise die Zielvi
 
 Die aktuelle Rezeptur ist die Rezeptur, die gerade im Extruder verarbeitet wird. Sie dient als Information, um später Vorschläge zur Rezepturanpassung geben zu können, ist jedoch keine Berechnungsgrundlage für die Modelle.
 
-###aktuelle Prozessdaten des Extruders
+### aktuelle Prozessdaten des Extruders
 
 <img src="https://github.com/user-attachments/assets/382d52c7-2507-4395-8858-122724a95fe9"
      alt="Prozessdaten"
@@ -47,7 +47,7 @@ Die aktuelle Rezeptur ist die Rezeptur, die gerade im Extruder verarbeitet wird.
 
 Hier werden die aktuellen Prozessdaten eingetragen, die am Extruder abgelesen werden. Anhand dieser Prozessdaten wird mittels eines Softsensors (KNN) die Ist-Viskositätskurve berechnet.
 
-###Wahl des Toleranzbereichs
+### Wahl des Toleranzbereichs
 
 <img src="https://github.com/user-attachments/assets/f62f3b93-a3b2-4123-ae26-983b7fd0e120"
      alt="Toleranzbereich"
@@ -55,7 +55,7 @@ Hier werden die aktuellen Prozessdaten eingetragen, die am Extruder abgelesen we
 
 Hier kann der Toleranzbereich festgelegt werden, innerhalb dessen die Kurven im Mittel voneinander abweichen dürfen.
 
-###Soll-Ist-Vergleich
+### Soll-Ist-Vergleich
 
 <img src="https://github.com/user-attachments/assets/9b03df4e-59cc-49b4-b1fa-1ca78715ce47"
      alt="Soll-Ist-Vergleich"
@@ -64,7 +64,7 @@ Hier kann der Toleranzbereich festgelegt werden, innerhalb dessen die Kurven im 
 Der Soll-Ist-Vergleich der berechneten Kurven wird grafisch dargestellt und zusätzlich quantitativ ausgewertet. 
 
 
-###Rezepturanpassung
+### Rezepturanpassung
 
 <img src="https://github.com/user-attachments/assets/0aadaed7-bdfc-4f72-95dc-5827515b1a3c"
      alt="Rezepturanpassung"
