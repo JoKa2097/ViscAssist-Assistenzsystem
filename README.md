@@ -39,7 +39,7 @@ Die Soll-Rezeptur ist die angestrebte Rezeptur, mit der normalerweise die Zielvi
 
 Die aktuelle Rezeptur ist die Rezeptur, die gerade im Extruder verarbeitet wird. Sie dient als Information, um später Vorschläge zur Rezepturanpassung geben zu können, ist jedoch keine Berechnungsgrundlage für die Modelle.
 
-### aktuelle Prozessdaten des Extruders
+### Aktuelle Prozessdaten des Extruders
 
 <img src="https://github.com/user-attachments/assets/382d52c7-2507-4395-8858-122724a95fe9"
      alt="Prozessdaten"
