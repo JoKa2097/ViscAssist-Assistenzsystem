@@ -8,8 +8,10 @@ Das Assistenzssystem besteht aus drei Komponenten um die Viskosität vorherzusag
 
 <img width="952" height="441" alt="grafik" src="https://github.com/user-attachments/assets/6ecd2931-e3e8-4e36-a145-6415ee6cc0f2" />
 
-Es wurde eine Datenbank mit 4 Polypropylentypen, 1 Peroxidtyp und 3 PCR Polypropylentypen erarbeitet. Der komplette Datensatz kann auf Anfrage erhalten werden. 
+Es wurde eine Datenbank mit 4 Polypropylentypen, 1 Peroxidtyp und 3 PCR Polypropylentypen erarbeitet. 
 Dazu wurde ein Transfermodell für Polyethylen entwickelt. Das Transfermodell wurde mit 1 Polyethylen und 2 PCR Polyethylentypen entwickelt. 
+
+Der komplette Datensatz kann auf Anfrage erhalten werden. 
 
 # Anleitung Nutzeroberfläche 
 
