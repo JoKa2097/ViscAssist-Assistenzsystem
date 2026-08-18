@@ -74,4 +74,28 @@ Darauf aufbauend wird eine Rezepturempfehlung iterativ berechnet, mit welcher di
 
 ## Übersicht zur Installation des Systems/ Ordnerstruktur
 
+## Aufbau des Assistenzsystems
+
+Die Anwendung ist in die Benutzeroberfläche (`app.py`) und die eigentliche Berechnungslogik im Verzeichnis `src/` aufgeteilt. Dadurch sind Darstellung, Modelle und Berechnungen voneinander getrennt.
+
+```text
+ViscAssist/
+│
+├── app.py
+│   └── Streamlit-Benutzeroberfläche und Ablaufsteuerung
+│
+├── data/
+│   └── Datenbasis für die Rezepturmodelle
+│
+├── models/
+│   └── Trainiertes KNN und zugehörige Skalierer
+│
+└── src/
+    ├── config.py
+    ├── preprocess.py
+    ├── inference.py
+    ├── prediction.py
+    ├── comparison.py
+    ├── control_logic.py
+    └── plotting.py
 
