@@ -99,6 +99,9 @@ ViscAssist/
     └── plotting.py
 ```
 
+### "config.py"
+
+Wahl der Materialdatem
 
 ### "preprocess.py" – Aufbereitung der Prozessdaten
 
