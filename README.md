@@ -113,6 +113,7 @@ Für das IKV-Modell werden folgende sechs Prozessgrößen verwendet:
 - mittlere Drehzahl
 - Volumenstrom
 - Extrudertemperatur
+
 Die Prozessgrößen werden in die für das KNN erforderliche Reihenfolge gebracht und mit dem beim Training verwendeten Input-Scaler skaliert.
 
 ### "inference.py" – Softsensor
