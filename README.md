@@ -57,6 +57,6 @@ Der Soll-Ist-Vergleich der berechneten Kurven wird grafisch dargestellt und zus�
      
 Darauf aufbauend wird eine Rezepturempfehlung iterativ berechnet, mit welcher die Soll-Viskosität errreicht werden soll. Die Suche nach einer Optimalen Rezeptur erfolgt nur in den genutzten Rezepturen.  
 
-# Übersicht zur Installation des Systems
+# Übersicht zur Installation des Systems/ Ordnerstruktur
 
 
