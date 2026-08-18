@@ -99,9 +99,6 @@ ViscAssist/
     ├── control_logic.py
     └── plotting.py
 
-Das entspricht auch deinem Code: In `config.py` stehen deine sieben Polymerkomponenten und die Pfade zu Modell, Input-/Target-Scaler und Rezeptur-CSV. :contentReference[oaicite:0]{index=0}
-
-Dann weiter:
 
 ```markdown
 ### `preprocess.py` – Aufbereitung der Prozessdaten
