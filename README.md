@@ -78,7 +78,6 @@ Darauf aufbauend wird eine Rezepturempfehlung iterativ berechnet, mit welcher di
 
 Die Anwendung ist in die Benutzeroberfläche (`app.py`) und die eigentliche Berechnungslogik im Verzeichnis `src/` aufgeteilt. Dadurch sind Darstellung, Modelle und Berechnungen voneinander getrennt.
 
-```text
 ViscAssist/
 │
 ├── app.py
@@ -101,7 +100,7 @@ ViscAssist/
 
 
 
-### `preprocess.py` – Aufbereitung der Prozessdaten
+### "preprocess.py" – Aufbereitung der Prozessdaten
 
 Bereitet die in der Benutzeroberfläche eingegebenen Prozessdaten für den Softsensor auf.
 
@@ -116,13 +115,13 @@ Für das IKV-Modell werden folgende sechs Prozessgrößen verwendet:
 
 Die Prozessgrößen werden in die für das KNN erforderliche Reihenfolge gebracht und mit dem beim Training verwendeten Input-Scaler skaliert.
 
-### `inference.py` – Softsensor
+### "inference.py" – Softsensor
 
 Enthält das trainierte künstliche neuronale Netz zur Vorhersage der Ist-Viskositätskurve.
 
 Das KNN erhält die sechs aufbereiteten Prozessgrößen als Eingangsgrößen und gibt die Viskosität an sechs definierten Scherraten aus. Neben der Modellarchitektur enthält das Modul die Funktionen zum Laden des trainierten Modells und der zugehörigen Skalierer sowie zur Rücktransformation der vorhergesagten Viskositätswerte.
 
-### `prediction.py` – Berechnung der Soll-Viskositätskurve
+### "prediction.py" – Berechnung der Soll-Viskositätskurve
 
 Enthält die analytischen Mischungsmodelle zur Berechnung der Viskositätskurve aus einer vorgegebenen Rezeptur.
 
@@ -134,13 +133,13 @@ Aus der in der Benutzeroberfläche angegebenen Soll-Rezeptur wird damit die Soll
 
 berechnet.
 
-### `comparison.py` – Soll-Ist-Vergleich
+### "comparison.py" – Soll-Ist-Vergleich
 
 Vergleicht die durch den Softsensor vorhergesagte Ist-Viskositätskurve mit der aus der Soll-Rezeptur berechneten Soll-Viskositätskurve.
 
 Hierfür werden unter anderem die absoluten und relativen Abweichungen sowie die mittlere absolute relative Abweichung berechnet. Anhand des vom Anwender vorgegebenen Toleranzbereichs wird anschließend bewertet, ob sich die Ist-Kurve noch innerhalb des zulässigen Bereichs befindet.
 
-### `control_logic.py` – Rezepturanpassung
+### "control_logic.py" – Rezepturanpassung
 
 Verknüpft die einzelnen Modelle und enthält die Logik zur Ermittlung einer geeigneten Rezepturanpassung.
 
@@ -150,7 +149,7 @@ Liegt die Abweichung außerhalb des vorgegebenen Toleranzbereichs, wird eine Rez
 
 Für mögliche Rezepturen wird die zu erwartende Viskositätskurve berechnet und bewertet. Ziel ist eine möglichst geringe Abweichung von der Soll-Viskositätskurve bei gleichzeitig möglichst kleiner Änderung der aktuellen Rezeptur.
 
-### `plotting.py` – Visualisierung
+### "plotting.py" – Visualisierung
 
 Enthält die Funktionen zur grafischen Darstellung der berechneten Viskositätskurven.
 
